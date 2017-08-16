@@ -28,7 +28,7 @@ nav{
   background-color:#D5D5D5;
   width: 100%;
   height: 77px;
-  position: fixed;
+  /*position: fixed;*/
 }
 
 
@@ -162,4 +162,6 @@ p{
   text-align: center;
   padding-top: 200px;
   font-weight: 100;
+  margin-bottom: 200px;
 }
+
