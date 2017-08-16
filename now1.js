@@ -20,7 +20,9 @@ function newElement() {
     alert("You must write something!");  //works
   } else {
     document.getElementById("list").appendChild(li);
-    alert("What time do you want to do this task?");
+    var time = prompt("What time do you want to do this task? (ex. 5:00, 6:00)");
+    var when = prompt("am or pm?")
+    alert("You want to to complete" + " " + inputValue + " at " + time + when);
     //takes input for hour and am or pm (using select)
   }
   document.getElementById("myInput").value = "";
@@ -60,6 +62,7 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
+//doesn't work right now
 function line(){
   var lis = document.getElementsById("list").children
   var i;
