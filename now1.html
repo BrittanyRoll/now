@@ -29,7 +29,7 @@
 </div>
 <div class="links">
   <ul>
-    <li><a href="#piechart1">Calendar</a></li>
+    <li><a href="#clock">Calendar</a></li>
     <li><a href="">Meditation</a></li>
     <li><a href="">Activities</a></li>
     <li><a href="">Progress</a></li>
@@ -48,65 +48,127 @@
 <body>
 <div>
 <p id="logo">NOW</p>
-<div
+</div>
 
 
 <h1 style="text-align: center; font-family: 'Raleway'; font-size: 50px; background: white;">Daily Calendar</h1>
 
-<div id="piechart1"></div>
-<div id="piechart2"></div>
+<div class="clock" id="clock">
+  <div class="clock-face">
+    <div class="hand hour-hand" style="transform: rotate(720deg);"></div>
+    <div class="hand min-hand" style="transform: rotate(414deg);"></div>
+    <div class="hand second-hand" style="transform: rotate(96deg);"></div>
+    <div class="circle"></div>
+    <div class="twelve dash" id="twelve dash"></div>
+    <div class="six dash" id="six dash"></div>
+    <div class="three dash" id="three dash"></div>
+    <div class="nine dash" id="nine dash"></div>
+   <div class="one dash" id="one dash"></div>
+    <div class="eight dash" id="eight dash"></div>
+    <div class="two dash" id="two dash"></div>
+    <div class="seven dash" id="seven dash"></div>
+    <div class="four dash" id="four dash"></div>
+    <div class="five dash" id="five dash"></div>
+    <div class="eleven dash" id="eleven dash"></div>
+    <div class="ten dash" id="ten dash"></div>
+    <div class="date">6</div>
+  </div>
+</div>
 
 <script type="text/javascript">
-//Sylvia's code
-// Load google charts
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-// Draw the chart and set the chart values
-function drawChart() {
-  var dataAM = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
-  ['Work', 8],
-  ['Eat', 2],
-  ['TV', 4],
-  ['Gym', 2],
-  ['Sleep', 8]
-]);
-  var dataPM = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
-  ['Work', 8],
-  ['Eat', 2],
-  ['TV', 4],
-  ['Gym', 2],
-  ['Sleep', 8]
-  ]);
-  // Optional; add a title and set the width and height of the chart
-  var optionsAM = {
-    'title':'AM',
-    'width':1000,
-    'height':800,
-    'colors': ['#CEBFF5','#BBB2D3','#A58EE3','#9E95B5','#A09DA9'],
-    'chartArea': {'width': '80%', 'height': '60%'},
-    'legend': 'none',
-    'pieSliceText': 'label',
-    'font-family': 'Raleway'
+	window.onload = function() {
+  // grab the hands
+  const secondHand = document.querySelector('.second-hand');
+  const minuteHand = document.querySelector('.min-hand');
+  const hourHand = document.querySelector('.hour-hand');
+  const date = document.querySelector('.date');
+  date.textContent = new Date().getDate();
+  function setDate() {
+    const now = new Date();
+    // seconds
+    const seconds = now.getSeconds();
+    const secondsDegrees = ((seconds/60) * 360) + 90;
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    console.log(seconds);
+    // minutes
+    const minutes = now.getMinutes();
+    const minutesDegree = ((minutes/60) * 360) + 90;
+    minuteHand.style.transform = `rotate(${minutesDegree}deg)`;
+    console.log(minutes);
+    // hours
+    const hours = now.getHours();
+    const hoursDegree = ((hours/12) * 360) + 90;
+    hourHand.style.transform = `rotate(${hoursDegree}deg)`;
+    console.log(hours);
+  }
+  setInterval(setDate, 1000);
 };
-  var optionsPM = {
-    'title':'PM',
-    'width':1000,
-    'height':800,
-    'colors': ['#CEBFF5','#BBB2D3','#A58EE3','#9E95B5','#A09DA9'],
-    'chartArea': {'width': '80%', 'height': '60%'},
-    'legend': 'none',
-    'pieSliceText': 'label',
-    'font-family': 'Raleway'
-};
-  // Display the chart inside the <div> element with id="piechart"
-  var chartAM = new google.visualization.PieChart(document.getElementById('piechart1'));
-  var chartPM = new google.visualization.PieChart(document.getElementById('piechart2'));
-  chartAM.draw(dataAM, optionsAM);
-  chartPM.draw(dataPM, optionsPM);
+function addTask(){
+  var task = document.getElementById("task").value;
+  var tim = document.getElementById("tim").value;
+  if (document.getElementById("tim").value == "12:00"){
+    document.getElementById("twelve dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("twelve dash").style.transform = "rotate(-90deg)";
+  }
+  else if (document.getElementById("tim").value == "1:00"){
+    document.getElementById("one dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("one dash").style.transform = "rotate(25.5deg)";
+  }
+  else if (document.getElementById("tim").value == "2:00"){
+    document.getElementById("two dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("two dash").style.transform = "rotate(55.5deg)";
+  }
+  else if (document.getElementById("tim").value == "3:00"){
+    document.getElementById("three dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("three dash").style.transform = "rotate(90deg)";
+  }
+  else if (document.getElementById("tim").value == "4:00"){
+    document.getElementById("four dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("four dash").style.transform = "rotate(-90deg)";
+  }
+  else if (document.getElementById("tim").value == "5:00"){
+    document.getElementById("five dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("five dash").style.transform = "rotate(25.5deg)";
+  }
+  else if (document.getElementById("tim").value == "6:00"){
+    document.getElementById("six dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("six dash").style.transform = "rotate(-90deg)";
+  }
+  else if (document.getElementById("tim").value == "7:00"){
+    document.getElementById("seven dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("seven dash").style.transform = "rotate(25.5deg)";
+  }
+  else if (document.getElementById("tim").value == "8:00"){
+    document.getElementById("eight dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("eight dash").style.transform = "rotate(55.5deg)";
+  }
+  else if (document.getElementById("tim").value == "9:00"){
+    document.getElementById("nine dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("nine dash").style.transform = "rotate(90deg)";
+  }
+  else if (document.getElementById("tim").value == "10:00"){
+    document.getElementById("ten dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("ten dash").style.transform = "rotate(-55.5deg)";
+  }
+  else if (document.getElementById("tim").value == "11:00"){
+    document.getElementById("eleven dash").innerHTML = task;
+    //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
+    document.getElementById("eleven dash").style.transform = "rotate(-25.5deg)";
+  }
 }
 </script>
 
 </body>
 </html>
+
