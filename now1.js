@@ -172,3 +172,211 @@ setInterval(setDate, 1000);
 
 window.onload = loadClock();
 
+//monthly cal
+function acti(){
+if (document.getElementById("mon").value == "day1"){
+	document.getElementById("hi").className = "active";
+	}
+
+else if (document.getElementById("mon").value == "day2"){
+  document.getElementById("hi2").className = "active";
+  }
+
+else if (document.getElementById("mon").value == "day3"){
+  document.getElementById("hi3").className = "active";
+    }
+
+else if (document.getElementById("mon").value == "day4"){
+  document.getElementById("hi4").className = "active";
+    }
+
+else if (document.getElementById("mon").value == "day5"){
+      document.getElementById("hi5").className = "active";
+        }
+
+else if (document.getElementById("mon").value == "day6"){
+      document.getElementById("hi6").className = "active";
+        }
+
+else if (document.getElementById("mon").value == "day7"){
+      document.getElementById("hi7").className = "active";
+        }
+
+else if (document.getElementById("mon").value == "day8"){
+        document.getElementById("hi8").className = "active";
+        }
+
+else if (document.getElementById("mon").value == "day9"){
+        document.getElementById("hi9").className = "active";
+        }
+else if (document.getElementById("mon").value == "day10"){
+        document.getElementById("hi10").className = "active";
+        }
+else if (document.getElementById("mon").value == "day11"){
+        	document.getElementById("hi11").className = "active";
+        }
+else if (document.getElementById("mon").value == "day12"){
+        document.getElementById("hi12").className = "active";
+        }
+else if (document.getElementById("mon").value == "day13"){
+        document.getElementById("hi13").className = "active";
+        }
+else if (document.getElementById("mon").value == "day14"){
+        document.getElementById("hi14").className = "active";
+      }
+else if (document.getElementById("mon").value == "day15"){
+              	document.getElementById("hi15").className = "active";
+              }
+else if (document.getElementById("mon").value == "day16"){
+              document.getElementById("hi16").className = "active";
+              }
+else if (document.getElementById("mon").value == "day17"){
+              document.getElementById("hi17").className = "active";
+              }
+else if (document.getElementById("mon").value == "day18"){
+              document.getElementById("hi18").className = "active";
+            }
+else if (document.getElementById("mon").value == "day19"){
+                    	document.getElementById("hi19").className = "active";
+                    }
+else if (document.getElementById("mon").value == "day20"){
+                    document.getElementById("hi20").className = "active";
+                    }
+else if (document.getElementById("mon").value == "day21"){
+                    document.getElementById("hi21").className = "active";
+                    }
+else if (document.getElementById("mon").value == "day22"){
+                    document.getElementById("hi22").className = "active";
+                  }
+else if (document.getElementById("mon").value == "day23"){
+                          	document.getElementById("hi23").className = "active";
+                          }
+else if (document.getElementById("mon").value == "day24"){
+                          document.getElementById("hi24").className = "active";
+                          }
+else if (document.getElementById("mon").value == "day25"){
+                          document.getElementById("hi25").className = "active";
+                          }
+else if (document.getElementById("mon").value == "day26"){
+                          document.getElementById("hi26").className = "active";
+                        }
+else if (document.getElementById("mon").value == "day27"){
+                          document.getElementById("hi27").className = "active";
+                                                  }
+else if (document.getElementById("mon").value == "day28"){
+                          document.getElementById("hi28").className = "active";
+                                                  }
+else if (document.getElementById("mon").value == "day29"){
+    document.getElementById("hi29").className = "active";
+                                                }
+else if (document.getElementById("mon").value == "day30"){
+    document.getElementById("hi30").className = "active";
+                                                                                                  }
+else if (document.getElementById("mon").value == "day31"){
+    document.getElementById("hi31").className = "active";
+                                                                                                }
+}
+
+function deacti(){
+if (document.getElementById("mon").value == "day1"){
+	document.getElementById("hi").className = "nactive";
+	}
+
+else if (document.getElementById("mon").value == "day2"){
+  document.getElementById("hi2").className = "nactive";
+  }
+
+else if (document.getElementById("mon").value == "day3"){
+  document.getElementById("hi3").className = "nactive";
+    }
+
+else if (document.getElementById("mon").value == "day4"){
+  document.getElementById("hi4").className = "nactive";
+    }
+
+else if (document.getElementById("mon").value == "day5"){
+      document.getElementById("hi5").className = "nactive";
+        }
+
+else if (document.getElementById("mon").value == "day6"){
+      document.getElementById("hi6").className = "nactive";
+        }
+
+else if (document.getElementById("mon").value == "day7"){
+      document.getElementById("hi7").className = "nactive";
+        }
+
+else if (document.getElementById("mon").value == "day8"){
+        document.getElementById("hi8").className = "nactive";
+        }
+
+else if (document.getElementById("mon").value == "day9"){
+        document.getElementById("hi9").className = "nactive";
+        }
+else if (document.getElementById("mon").value == "day10"){
+        document.getElementById("hi10").className = "nactive";
+        }
+else if (document.getElementById("mon").value == "day11"){
+        	document.getElementById("hi11").className = "nactive";
+        }
+else if (document.getElementById("mon").value == "day12"){
+        document.getElementById("hi12").className = "nactive";
+        }
+else if (document.getElementById("mon").value == "day13"){
+        document.getElementById("hi13").className = "nactive";
+        }
+else if (document.getElementById("mon").value == "day14"){
+        document.getElementById("hi14").className = "nactive";
+      }
+else if (document.getElementById("mon").value == "day15"){
+              	document.getElementById("hi15").className = "nactive";
+              }
+else if (document.getElementById("mon").value == "day16"){
+              document.getElementById("hi16").className = "nactive";
+              }
+else if (document.getElementById("mon").value == "day17"){
+              document.getElementById("hi17").className = "nactive";
+              }
+else if (document.getElementById("mon").value == "day18"){
+              document.getElementById("hi18").className = "nactive";
+            }
+else if (document.getElementById("mon").value == "day19"){
+                    	document.getElementById("hi19").className = "nactive";
+                    }
+else if (document.getElementById("mon").value == "day20"){
+                    document.getElementById("hi20").className = "nactive";
+                    }
+else if (document.getElementById("mon").value == "day21"){
+                    document.getElementById("hi21").className = "nactive";
+                    }
+else if (document.getElementById("mon").value == "day22"){
+                    document.getElementById("hi22").className = "active";
+                  }
+else if (document.getElementById("mon").value == "day23"){
+                          	document.getElementById("hi23").className = "nactive";
+                          }
+else if (document.getElementById("mon").value == "day24"){
+                          document.getElementById("hi24").className = "nactive";
+                          }
+else if (document.getElementById("mon").value == "day25"){
+                          document.getElementById("hi25").className = "nactive";
+                          }
+else if (document.getElementById("mon").value == "day26"){
+                          document.getElementById("hi26").className = "nactive";
+                        }
+else if (document.getElementById("mon").value == "day27"){
+                          document.getElementById("hi27").className = "nactive";
+                                                  }
+else if (document.getElementById("mon").value == "day28"){
+                          document.getElementById("hi28").className = "nactive";
+                                                  }
+else if (document.getElementById("mon").value == "day29"){
+    document.getElementById("hi29").className = "nactive";
+                                                }
+else if (document.getElementById("mon").value == "day30"){
+    document.getElementById("hi30").className = "mactive";
+                                                                                                  }
+else if (document.getElementById("mon").value == "day31"){
+    document.getElementById("hi31").className = "nactive";
+                                                                                                }
+}
