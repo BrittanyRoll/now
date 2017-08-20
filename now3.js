@@ -212,18 +212,6 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-//doesn't work right now
-function line(){
-  var lis = document.getElementsById("list").children
-  var i;
-  for (i = 0; i < lis.length; i++) {
-    lis[i].onclick = function() {
-      var litem = this;
-      litem.style.textDecoration = "line-through";
-    }
-}
-}
-
 function loadClock() {
 // grab the hands
 const secondHand = document.querySelector('.second-hand');
