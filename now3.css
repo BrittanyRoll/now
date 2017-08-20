@@ -1,18 +1,18 @@
-@media (min-width: 801px){
+@media (min-width: 850px){
  .menu .links ul li a{
    float: left;
    text-align: right;
-   margin-left: 6%;
+   margin-left: 8.5%;
    margin-top: 30px;
    margin-right: 0;
  }
  }
 
- @media (max-width: 800px){
+ @media (max-width: 849px){
  .menu .links ul li a{
    float: left;
    text-align: right;
-   margin-left: 3%;
+   margin-left: 6%;
    margin-top: 30px;
    margin-right: 0;
  }
@@ -28,7 +28,6 @@ nav{
  background-color:#D5D5D5;
  width: 100%;
  height: 77px;
- /*position: fixed;*/
 }
 
 
@@ -293,6 +292,8 @@ div.menu ul{
  position: absolute;
  width: 1.5px;
  height: 5.7%;
+ font-family: 'Raleway', sans-serif;
+ font-size: 10px;
 }
 .twelve {
  left: 50%;
@@ -367,7 +368,6 @@ div.menu ul{
  width: 12%;
  height: 12%;
  background: #eaeaea;
- /*background: red;*/
  border-radius: 5%;
  text-align: center;
  vertical-align: middle;
@@ -385,13 +385,39 @@ div.menu ul{
     margin-left: 27%;
   }
 
-  #mo{
-    /*color: #d5d5d5;*/
+  .up2{
+    margin-bottom: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1255px) and (min-width: 1151px){
+
+  #clock{
+    margin-left: 10%;
+  }
+
+  #clock2{
+    margin-left: 60%;
   }
 
   .up2{
     margin-bottom: 1000px;
   }
+
+  #mo{
+  	position: relative;
+  	/*margin-top: 200px;*/
+  }
+
+  .month{
+  	position: relative;
+  }
+}
+
+@media only screen and (max-width: 1145px) and (min-width: 1110px){
+	#mo{
+		margin-top: 1400px;
+	}
 }
 
 
@@ -482,6 +508,13 @@ div.menu ul{
 
 @media screen and (max-width: 290px) {
     .weekdays li, .days li {width: 12.2%;}
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1255px){
+	#clock2{
+		float: none;
+		clear: right;
+	}
 }
 
 #mo{
