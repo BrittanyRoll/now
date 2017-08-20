@@ -114,7 +114,7 @@ div.menu ul{
 
 input[type=checkbox]{
   margin-right: 10px;
-  background: black;
+  background-color: black;
 }
 
 
@@ -385,14 +385,18 @@ input[type=checkbox]{
   margin-right: 44.5%;
 }
 
-@media only screen and (max-width: 1255px) and (min-width: 881px){
+@media only screen and (max-width: 1255px) and (min-width: 500px){
 
   #clock{
-    margin-left: 27%;
+    margin-left: 30%;
+    margin-right: 30%;
+    float: left;
   }
 
   #clock2{
-    margin-left: 27%;
+    margin-left: 30%;
+    margin-right: 30%;
+    float: left;
   }
 
   .up2{
@@ -402,25 +406,8 @@ input[type=checkbox]{
 
 @media only screen and (max-width: 1255px) and (min-width: 1151px){
 
-  #clock{
-    margin-left: 10%;
-  }
-
-  #clock2{
-    margin-right: 60%;
-  }
-
   .up2{
     margin-bottom: 1000px;
-  }
-
-  #mo{
-  	position: relative;
-  	/*margin-top: 200px;*/
-  }
-
-  .month{
-  	position: relative;
   }
 }
 
@@ -518,13 +505,6 @@ input[type=checkbox]{
 
 @media screen and (max-width: 290px) {
     .weekdays li, .days li {width: 12.2%;}
-}
-
-@media only screen and (min-width: 1150px) and (max-width: 1255px){
-	#clock2{
-		float: none;
-		clear: right;
-	}
 }
 
 #mo{
