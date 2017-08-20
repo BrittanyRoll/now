@@ -1,3 +1,4 @@
+
 var time = "";
 var inputValue = "";
 var when = "";
@@ -9,6 +10,8 @@ function openNav() {
 function closeNav() {
   document.getElementById("dropcontent").style.visibility = "hidden";
 }
+
+
 
 function addTask(){
 //var task = document.getElementById("myInput").value;
@@ -153,6 +156,8 @@ function newElement() {
   var li = document.createElement("li");
   inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
+  li.className = "item";
+  $('<input type="checkbox" value="1"/>').appendTo(li);
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");  //works
