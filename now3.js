@@ -1,4 +1,3 @@
-
 var time = "";
 var inputValue = "";
 var when = "";
@@ -217,7 +216,7 @@ function loadClock() {
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
-const date = document.querySelector('.date');
+const date = document.querySelectorAll('.date');
 date.textContent = new Date().getDate();
 function setDate() {
   const now = new Date();
@@ -480,4 +479,53 @@ else if (document.getElementById("mon").value == "day30"){
 else if (document.getElementById("mon").value == "day31"){
     document.getElementById("hi31").className = "nactive";
                                                                                                 }
+}
+
+
+//stay connected js
+//var modal = document.getElementById('myModal');
+// Get the button that opens the modal
+//var btn = document.getElementById("myBt1n");
+// Get the <span> element that closes the modal
+//var span = document.getElementsByClassName("close2")[0];
+// When the user clicks the button, open the modal
+//btn.onclick = function() {
+    //modal.style.display = "block";
+//}
+// When the user clicks on <span> (x), close the modal
+//span.onclick = function() {
+    //modal.style.display = "none";
+//}
+// When the user clicks anywhere outside of the modal, close it
+//window.onclick = function(event) {
+  //  if (event.target == modal) {
+  //      modal.style.display = "none";
+  //  }
+//}
+
+function weekFunction() {
+    var day = prompt("Enter the day you would like to complete the task", "monday");
+    var time = prompt("Enter the time you would like to complete the task", "5:00");
+    var task = prompt("Enter the task you would like ot complete", "write essay");
+    if (day == ("monday")){
+      document.getElementById("monday").innerHTML = document.getElementById("monday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
+    }
+    if (day == ("tuesday")){
+      document.getElementById("tuesday").innerHTML = document.getElementById("tuesday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
+    }
+    if (day == ("wednesday")){
+      document.getElementById("wednesday").innerHTML = document.getElementById("wednesday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
+    }
+    if (day == ("thursday")){
+      document.getElementById("thursday").innerHTML = document.getElementById("thursday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
+    }
+    if (day == ("friday")){
+      document.getElementById("friday").innerHTML = document.getElementById("friday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
+    }
+    if (day == ("saturday")){
+      document.getElementById("saturday").innerHTML = document.getElementById("saturday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
+    }
+    if (day == ("sunday")){
+      document.getElementById("sunday").innerHTML = document.getElementById("sunday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
+    }
 }
