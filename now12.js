@@ -10,37 +10,59 @@ function closeNav() {
   document.getElementById("dropcontent").style.visibility = "hidden";
 }
 
-function weekFunction(){
-    var day = prompt("Enter the day you would like to complete the task");
-    var times = prompt("Enter the time you would like to complete the task"); 
-    var task = prompt("Enter the task you would like to complete");
-    //only reads the first if statement
-    if (day == "tuesday" || day == "Tuesday"){
-      document.getElementById("tuesday").innerHTML = document.getElementById("tuesday").innerHTML + "<br>" + times + " " + task;
-    }
-    else if (day == "monday" || day == "Monday"){
-      document.getElementById("monday").innerHTML = document.getElementById("monday").innerHTML + "<br>" + times + " " + task;
-    }
-    else if (day == "wednesday" || day == "Wednesday"){
-      document.getElementById("wednesday").innerHTML = document.getElementById("wednesday").innerHTML + "<br>" + times + " " + task;
-    }
-    else if (day == "thursday" || day == "Thursday"){
-      document.getElementById("thursday").innerHTML = document.getElementById("thursday").innerHTML + "<br>" + times + " " + task;
-    }
-    else if (day == "friday" || day == "Friday"){
-      document.getElementById("friday").innerHTML = document.getElementById("friday").innerHTML + "<br>" + times + " " + task;
-    }
-    else if (day == "saturday" || day == "Saturday"){
-      document.getElementById("saturday").innerHTML = document.getElementById("saturday").innerHTML + "<br>" + times + " " + task;
-    }
-    else if (day == "sunday" || day == "Sunday"){
-      document.getElementById("sunday").innerHTML = document.getElementById("sunday").innerHTML + "<br>" + times + " " + task;
-    }
-    else{  //not working
-      alert("Not Valid!");
-    }
+var mondaylist = [];
+var tuesdaylist = [];
+var wednesdaylist = [];
+var thursdaylist = [];
+var fridaylist = [];
+var saturdaylist = [];
+var sundaylist = [];
+var day = "";
+var times = "";
+var task = "";
+
+function printTask(list,day){
+  list.sort();
+  document.getElementById(day).innerHTML = "";
+  for (i=0; i < list.length; i++){
+    document.getElementById(day).innerHTML = document.getElementById(day).innerHTML + "<br>" + day + " at " +list[i] + " " + task;
+  }
 }
 
+function weekFunction() {
+    day = prompt("Enter the day you would like to complete the task", "monday");
+    times = prompt("Enter the time you would like to complete the task", "5:00");
+    task = prompt("Enter the task you would like ot complete", "write essay");
+
+    if (day == ("monday")){
+      mondaylist.push(times);
+      printTask(mondaylist,"monday");
+    }
+    if (day == ("tuesday")){
+      tuesdaylist.push(times);
+      printTask(tuesdaylist,"tuesday");
+    }
+    if (day == ("wednesday")){
+      wednesdaylist.push(times);
+      printTask(wednesdaylist,"wednesday");
+    }
+    if (day == ("thursday")){
+      thursdaylist.push(times);
+      printTask(thursdaylist,"thursday");
+    }
+    if (day == ("friday")){
+      fridaylist.push(times);
+      printTask(fridaylist,"friday");
+    }
+    if (day == ("saturday")){
+      saturdaylist.push(times);
+      printTask(saturdaylist,"saturday");
+    }
+    if (day == ("sunday")){
+      sundaylist.push(times);
+      printTask(sundaylist,"sunday");
+    }
+}
 
 function addTask(){
 //var task = document.getElementById("myInput").value;
@@ -588,4 +610,3 @@ function button(){
 //}
 
 //for some reason tasks print in one paragraph
-
