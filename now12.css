@@ -133,10 +133,9 @@ input[type=checkbox]{
 
 .addBtn {
    padding: 10px;
-   height: 10px;
-   width: 20px;
-   background:#D5D5D5;
-   color: black;
+   background: #D5D5D5;
+   border: .5px solid #c1c1c1;
+   font-family: 'Raleway', sans-serif;
    float: left;
    text-align: center;
    font-size: 16px;
