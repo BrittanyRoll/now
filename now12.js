@@ -73,7 +73,7 @@ if (when == "am"){
   if (time == "12:00"){
     document.getElementById("twelve dash").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("twelve dash").style.transform = "rotate(-90deg)";
+    //document.getElementById("twelve dash").style.transform = "rotate(-90deg)";
     twelve =   document.getElementById("twelve dash");
     console.log(twelve);
   }
@@ -95,17 +95,17 @@ if (when == "am"){
   else if (time == "4:00"){
     document.getElementById("four dash").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("four dash").style.transform = "rotate(-90deg)";
+    document.getElementById("four dash").style.transform = "rotate(100deg)";
   }
   else if (time == "5:00"){
     document.getElementById("five dash").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("five dash").style.transform = "rotate(25.5deg)";
+    document.getElementById("five dash").style.transform = "rotate(-25.5deg)";
   }
   else if (time == "6:00"){
     document.getElementById("six dash").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("six dash").style.transform = "rotate(-90deg)";
+    //document.getElementById("six dash").style.transform = "rotate(-90deg)";
   }
   else if (time == "7:00"){
     document.getElementById("seven dash").innerHTML = inputValue;
@@ -120,7 +120,7 @@ if (when == "am"){
   else if (time == "9:00"){
     document.getElementById("nine dash").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("nine dash").style.transform = "rotate(90deg)";
+    document.getElementById("nine dash").style.transform = "rotate(-90deg)";
   }
   else if (time == "10:00"){
     document.getElementById("ten dash").innerHTML = inputValue;
@@ -138,7 +138,7 @@ else if (when == "pm"){
   if (time == "12:00"){
     document.getElementById("twelve dash2").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("twelve dash2").style.transform = "rotate(-90deg)";
+    //document.getElementById("twelve dash2").style.transform = "rotate(-90deg)";
   }
   else if (time == "1:00"){
     document.getElementById("one dash2").innerHTML = inputValue;
@@ -158,17 +158,17 @@ else if (when == "pm"){
   else if (time == "4:00"){
     document.getElementById("four dash2").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("four dash2").style.transform = "rotate(-90deg)";
+    document.getElementById("four dash2").style.transform = "rotate(100deg)";
   }
   else if (time == "5:00"){
     document.getElementById("five dash2").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("five dash2").style.transform = "rotate(25.5deg)";
+    document.getElementById("five dash2").style.transform = "rotate(-25.5deg)";
   }
   else if (time == "6:00"){
     document.getElementById("six dash2").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("six dash2").style.transform = "rotate(-90deg)";
+    //document.getElementById("six dash2").style.transform = "rotate(-90deg)";
   }
   else if (time == "7:00"){
     document.getElementById("seven dash2").innerHTML = inputValue;
@@ -183,7 +183,7 @@ else if (when == "pm"){
   else if (time == "9:00"){
     document.getElementById("nine dash2").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
-    document.getElementById("nine dash2").style.transform = "rotate(90deg)";
+    document.getElementById("nine dash2").style.transform = "rotate(-90deg)";
   }
   else if (time == "10:00"){
     document.getElementById("ten dash2").innerHTML = inputValue;
