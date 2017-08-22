@@ -857,9 +857,18 @@ h3{
   margin-bottom: 40px;
 }
 
+.img-circle{
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.container{
+  margin-bottom: 20px;
+}
+
 
 #desc1{
-  font-size: 30px;
+  font-size: 50px;
   text-align:center;
   margin-right: 5%;
   font-family: 'Raleway', sans-serif;
@@ -876,7 +885,7 @@ h3{
 }
 
 #desc2{
-  font-size: 30px;
+  font-size: 50px;
   text-align:center;
   font-family: 'Raleway', sans-serif;
   margin-bottom: 25px;
@@ -889,9 +898,4 @@ h3{
  text-align:center;
   margin-left: 15%;
   margin-bottom: 30px;
-}
-
-#aboutus img{
-  display: block;
-  margin: 0 auto;
 }
