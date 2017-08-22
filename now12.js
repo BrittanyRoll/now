@@ -20,12 +20,13 @@ var sundaylist = [];
 var day = "";
 var times = "";
 var task = "";
+document.getElementById(day).innerHTML = "";
 
 function printTask(list,day){
   list.sort();
-  document.getElementById(day).innerHTML = "";
+
   for (i=0; i < list.length; i++){
-    document.getElementById(day).innerHTML = document.getElementById(day).innerHTML + "<br>" + day + " at " +list[i] + " " + task;
+    document.getElementById(day).innerHTML = document.getElementById(day).innerHTML + "<br>" + list[i] + " " + task;
   }
 }
 
@@ -34,31 +35,31 @@ function weekFunction() {
     times = prompt("Enter the time you would like to complete the task", "5:00");
     task = prompt("Enter the task you would like ot complete", "write essay");
 
-    if (day == ("monday")){
+    if (day == ("monday") || day == ("Monday") || day == ("MONDAY")){
       mondaylist.push(times);
       printTask(mondaylist,"monday");
     }
-    if (day == ("tuesday")){
+    if (day == ("tuesday") || day == ("Tuesday") || day == ("TUESDAY")){
       tuesdaylist.push(times);
       printTask(tuesdaylist,"tuesday");
     }
-    if (day == ("wednesday")){
+    if (day == ("wednesday") || day == ("Wednesday") || day == ("WEDNESDAY")){
       wednesdaylist.push(times);
       printTask(wednesdaylist,"wednesday");
     }
-    if (day == ("thursday")){
+    if (day == ("thursday") || day == ("Thursday") || day == ("THURSDAY")){
       thursdaylist.push(times);
       printTask(thursdaylist,"thursday");
     }
-    if (day == ("friday")){
+    if (day == ("friday") || day == ("Friday") || day == ("FRIDAY")){
       fridaylist.push(times);
       printTask(fridaylist,"friday");
     }
-    if (day == ("saturday")){
+    if (day == ("saturday") || day == ("Saturday") || day == ("SATURDAY")){
       saturdaylist.push(times);
       printTask(saturdaylist,"saturday");
     }
-    if (day == ("sunday")){
+    if (day == ("sunday") || day == ("Sunday") || day == ("SUNDAY")){
       sundaylist.push(times);
       printTask(sundaylist,"sunday");
     }
