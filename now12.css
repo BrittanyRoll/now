@@ -1,14 +1,14 @@
-@media (min-width: 850px){
+@media only screen and (min-width: 721px) and (max-width: 908px){
  .menu .links ul li a{
    float: left;
    text-align: right;
-   margin-left: 8.5%;
+   margin-left: 7%;
    margin-top: 30px;
    margin-right: 0;
  }
  }
 
- @media (max-width: 849px){
+ @media (max-width: 720px){
  .menu .links ul li a{
    float: left;
    text-align: right;
@@ -17,6 +17,18 @@
    margin-right: 0;
  }
  }
+
+ @media (min-width: 909px){
+ .menu .links ul li a{
+   float: left;
+   text-align: right;
+   margin-left: 10%;
+   margin-top: 30px;
+   margin-right: 0;
+ }
+ }
+
+
 *{
    margin: 0;
  }
@@ -658,21 +670,24 @@ input[type=checkbox]{
   margin-top: 50px;
 }
 
+.up6 p a{
+  text-decoration: none;
+}
+
+.up6 .downto6{
+  margin-left: 90%;
+}
+
+.up6 .upto6{
+  margin-left: 90%;
+}
+
+.up6{
+  width: 99%;
+  margin-top: 50px;
+}
 
 /*meditation css*/
-
-.circle1 {
-  z-index: 1;
-  background-color: #99AAC3;
-  border: 50px solid #99AAC3;
-  height: 350px;
-  width: 300px;
-  border-radius: 100%;
-  margin-left: 35%;
-  margin-top: 50px;
-  position: relative;
-
-}
 
 .circle2 {
   background-color: #99BFC3;
@@ -787,7 +802,6 @@ h3{
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
-
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -801,7 +815,6 @@ h3{
     animation-name: animatetop;
     animation-duration: 0.4s
 }
-
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
@@ -810,7 +823,6 @@ h3{
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
-
 .close {
     color: white;
     float: right;
