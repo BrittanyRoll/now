@@ -29,7 +29,7 @@
   <ul>
     <li><a href="#cals">Calendars</a></li>
     <li><a href="#med">Meditation</a></li>
-    <li><a href="">Progress</a></li>
+    <li><a href="#pro">Progress</a></li>
     <li><a href="">Stay Connected</a></li>
     <li><a href="#aboutus">About US</a></li>
   </ul>
@@ -50,7 +50,7 @@
 
 <div class="cals" id="cals">
 <p id="d" class="d"><a href="#day">DAILY</a></p>
-<p id="w" class="w"><a href="">WEEKLY</a></p>
+<p id="w" class="w"><a href="#we">WEEKLY</a></p>
 <p id="m" class="m"><a href="#mo">MONTHLY</a></p>
 </div>
 
@@ -116,18 +116,18 @@
 </div>
 
 
-<div class="weekly">
-  <h1 style="text-align: center; font-family: 'Raleway'; font-size: 50px;" id="we">WEEKLY CALENDAR</h1>
 
+  <h1 style="text-align: center; font-family: 'Raleway'; font-size: 50px;" id="we">WEEKLY CALENDAR</h1>
+<div class="weekly">
 <button onclick="weekFunction()" class="wee">Add Task</button>
 
-<p id="monday"></p>
-<p id="tuesday"></p>
-<p id="wednesday"></p>
-<p id="thursday"></p>
-<p id="friday"></p>
-<p id="saturday"></p>
-<p id="sunday"></p>
+<div id="monday">Monday</div>
+<div id="tuesday">Tuesday</div>
+<div id="wednesday">Wednesday</div>
+<div id="thursday">Thursday</div>
+<div id="friday">Friday</div>
+<div id="saturday">Saturday</div>
+<div id="sunday">Sunday</div>
 
 </div>
 
@@ -255,12 +255,35 @@
 <div class="up5">
   <p>
     <a href="#links"><img class="upto5"src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-256.png" height="42" width="42"></a>
-    <a href="#aboutus"> <img class="downto5" src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png" height="42" width="42"> </a>
+    <a href="#pro"> <img class="downto5" src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png" height="42" width="42"> </a>
     <p>
 </div>
 
+<h1 style="text-align: center; font-family: 'Raleway'; font-size: 50px;" id="pro">Progress</h1> 
+
+<div id="prog">
+  <canvas id="myPoints" width="500" height="70" style="border:1px solid white;"></canvas>
 
 
+<button id="progr" onclick="button()">Task Complete</button>
+
+<h3 id="woo">points:</h3>
+<h3 id = "woo2" ></h3>
+
+<center><h3 id = "sticker">achievements:</h3></center>
+
+<img id= "CROWN" src="images/crown.png"  alt="crown" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "DIAMOND" src="images/diamond.png"  alt="diamond" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "THUMB" src="images/thumb.png"  alt="thumb" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "STAR" src="images/star.png"  alt="star" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "CASH" src="images/cash.png"  alt="cash" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "KEY" src="images/key.png"  alt="key" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "TROPHY" src="images/trophy.png"  alt="trophy" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "SMILE" src="images/smile.png"  alt="smile" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "CHECK" src="images/check.png"  alt="check" style="width:50px;height:50px; display: none; margin-right: 15px;">
+<img id= "CUPCAKE" src="images/cupcake.png"  alt="cupcake" style="width:50px;height:50px; display: none; margin-right: 15px;">
+
+</div>
 
 
 
@@ -271,14 +294,8 @@
 <!--Saty coonnected code-->
 <!--<div class="stay">
   <h2>Stay Connected</h2>
-
-
 <button id="myBttn">Email us your phone number to receive motivational texts</button>
-
-
 <div id="myModal" class="modal">
-
-
   <div class="modal-content">
     <div class="model-header">
       <span class="close2">&times;</span>
@@ -292,7 +309,6 @@
       <h3>Thank you</h3>
     </div>
   </div>
-
 </div>
 </div>-->
 
