@@ -1,6 +1,8 @@
 var time = "";
 var inputValue = "";
 var when = "";
+var x = 50;
+var numPoints = 0;
 
 function openNav() {
   document.getElementById("dropcontent").style.visibility = "visible";
@@ -10,29 +12,30 @@ function closeNav() {
   document.getElementById("dropcontent").style.visibility = "hidden";
 }
 
-var mondaylist = [];
-var tuesdaylist = [];
-var wednesdaylist = [];
-var thursdaylist = [];
-var fridaylist = [];
-var saturdaylist = [];
-var sundaylist = [];
+var mondaylist = [".Monday"];
+var tuesdaylist = [".Tuesday"];
+var wednesdaylist = [".Wednesday"];
+var thursdaylist = [".Thursday"];
+var fridaylist = [".Friday"];
+var saturdaylist = [".Saturday"];
+var sundaylist = [".Sunday"];
 var day = "";
 var times = "";
 var task = "";
-document.getElementById(day).innerHTML = "";
+
 
 function printTask(list,day){
   list.sort();
 
+  document.getElementById(day).innerHTML = "";
   for (i=0; i < list.length; i++){
-    document.getElementById(day).innerHTML = document.getElementById(day).innerHTML + "<br>" + list[i] + " " + task;
+    document.getElementById(day).innerHTML = document.getElementById(day).innerHTML + "<br>" + list[i];
   }
 }
 
 function weekFunction() {
     day = prompt("Enter the day you would like to complete the task", "monday");
-    times = prompt("Enter the time you would like to complete the task", "5:00");
+    times = prompt("Enter the time you would like to complete the task + the task itself", ".ex. 5:00 write code");
     task = prompt("Enter the task you would like ot complete", "write essay");
 
     if (day == ("monday") || day == ("Monday") || day == ("MONDAY")){
@@ -74,8 +77,6 @@ if (when == "am"){
     document.getElementById("twelve dash").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
     //document.getElementById("twelve dash").style.transform = "rotate(-90deg)";
-    twelve =   document.getElementById("twelve dash");
-    console.log(twelve);
   }
   else if (time == "1:00"){
     document.getElementById("one dash").innerHTML = inputValue;
@@ -207,6 +208,7 @@ else if(n == 1){
   document.getElementById("monday").innerHTML = document.getElementById("monday").innerHTML + "<br>" + time + " " + inputValue;
 }
 else if(n == 2){
+  console.log("hi");
   document.getElementById("tuesday").innerHTML = document.getElementById("tuesday").innerHTML + "<br>" + time + " " + inputValue;
 }
 else if(n == 3){
@@ -230,6 +232,8 @@ else if(n == 6){
 //}
 // Create a new list item when clicking on the "Add" button
 function newElement() {
+  var d = new Date();
+  var n = d.getDay()
   var li = document.createElement("li");
   inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
@@ -245,6 +249,27 @@ function newElement() {
     when = prompt("am or pm?")
     alert("You want to to complete" + " " + inputValue + " at " + time + when);
     //takes input for hour and am or pm (using select)
+    if (n == 1){
+      mondaylist.push(time + " " + inputValue);
+    }
+    if (n == 2){
+      tuesdaylist.push(time + " " + inputValue);
+    }
+    if (n == 3){
+      wednesdaylist.push(time + " " + inputValue);
+    }
+    if (n == 4){
+      thursdaylist.push(time + " " + inputValue);
+    }
+    if (n == 5){
+      fridaylist.push(time + " " + inputValue);
+    }
+    if (n == 6){
+      saturdaylist.push(time + " " + inputValue);
+    }
+    if (n == 0){
+      sundaylist.push(time + " " + inputValue);
+    }
   }
 
   addTask();
@@ -561,8 +586,6 @@ else if (document.getElementById("mon").value == "day31"){
 
 //progress js
 
-var x = 50;
-var numPoints = 0;
 function button(){
   alert("Congratulations! You just won 15 points!");
   var c = document.getElementById("myPoints");
