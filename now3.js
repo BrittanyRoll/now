@@ -10,6 +10,36 @@ function closeNav() {
   document.getElementById("dropcontent").style.visibility = "hidden";
 }
 
+function weekFunction(){
+    var day = prompt("Enter the day you would like to complete the task");
+    var times = prompt("Enter the time you would like to complete the task"); 
+    var task = prompt("Enter the task you would like to complete");
+    //only reads the first if statement
+    if (day == "tuesday" || day == "Tuesday"){
+      document.getElementById("tuesday").innerHTML = document.getElementById("tuesday").innerHTML + "<br>" + times + " " + task;
+    }
+    else if (day == "monday" || day == "Monday"){
+      document.getElementById("monday").innerHTML = document.getElementById("monday").innerHTML + "<br>" + times + " " + task;
+    }
+    else if (day == "wednesday" || day == "Wednesday"){
+      document.getElementById("wednesday").innerHTML = document.getElementById("wednesday").innerHTML + "<br>" + times + " " + task;
+    }
+    else if (day == "thursday" || day == "Thursday"){
+      document.getElementById("thursday").innerHTML = document.getElementById("thursday").innerHTML + "<br>" + times + " " + task;
+    }
+    else if (day == "friday" || day == "Friday"){
+      document.getElementById("friday").innerHTML = document.getElementById("friday").innerHTML + "<br>" + times + " " + task;
+    }
+    else if (day == "saturday" || day == "Saturday"){
+      document.getElementById("saturday").innerHTML = document.getElementById("saturday").innerHTML + "<br>" + times + " " + task;
+    }
+    else if (day == "sunday" || day == "Sunday"){
+      document.getElementById("sunday").innerHTML = document.getElementById("sunday").innerHTML + "<br>" + times + " " + task;
+    }
+    else{  //not working
+      alert("Not Valid!");
+    }
+}
 
 
 function addTask(){
@@ -81,7 +111,7 @@ if (when == "am"){
   }
 }
 
-if (when == "pm"){
+else if (when == "pm"){
   if (time == "12:00"){
     document.getElementById("twelve dash2").innerHTML = inputValue;
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
@@ -142,6 +172,31 @@ if (when == "pm"){
     //document.getElementById("twelve dash").innerHTML.style.fontSize = "100px";
     document.getElementById("eleven dash2").style.transform = "rotate(-25.5deg)";
   }
+}
+
+
+var d = new Date();
+var n = d.getDay()
+if (n == 0){
+  document.getElementById("sunday").innerHTML = document.getElementById("sunday").innerHTML + "<br>" + time + " " + inputValue;
+}
+else if(n == 1){
+  document.getElementById("monday").innerHTML = document.getElementById("monday").innerHTML + "<br>" + time + " " + inputValue;
+}
+else if(n == 2){
+  document.getElementById("tuesday").innerHTML = document.getElementById("tuesday").innerHTML + "<br>" + time + " " + inputValue;
+}
+else if(n == 3){
+  document.getElementById("wednesday").innerHTML = document.getElementById("wednesday").innerHTML + "<br>" + time + " " + inputValue;
+}
+else if(n == 4){
+  document.getElementById("thursday").innerHTML = document.getElementById("thursday").innerHTML + "<br>" + time + " " + inputValue;
+}
+else if(n == 5){
+  document.getElementById("friday").innerHTML = document.getElementById("friday").innerHTML + "<br>" + time + " " + inputValue;
+}
+else if(n == 6){
+  document.getElementById("saturday").innerHTML = document.getElementById("saturday").innerHTML + "<br>" + time + " " + inputValue;
 }
 
 }
@@ -275,8 +330,8 @@ window.onload = loadClock();
 //monthly cal
 function acti(){
 if (document.getElementById("mon").value == "day1"){
-	document.getElementById("hi").className = "active";
-	}
+  document.getElementById("hi").className = "active";
+  }
 
 else if (document.getElementById("mon").value == "day2"){
   document.getElementById("hi2").className = "active";
@@ -313,7 +368,7 @@ else if (document.getElementById("mon").value == "day10"){
         document.getElementById("hi10").className = "active";
         }
 else if (document.getElementById("mon").value == "day11"){
-        	document.getElementById("hi11").className = "active";
+          document.getElementById("hi11").className = "active";
         }
 else if (document.getElementById("mon").value == "day12"){
         document.getElementById("hi12").className = "active";
@@ -325,7 +380,7 @@ else if (document.getElementById("mon").value == "day14"){
         document.getElementById("hi14").className = "active";
       }
 else if (document.getElementById("mon").value == "day15"){
-              	document.getElementById("hi15").className = "active";
+                document.getElementById("hi15").className = "active";
               }
 else if (document.getElementById("mon").value == "day16"){
               document.getElementById("hi16").className = "active";
@@ -337,7 +392,7 @@ else if (document.getElementById("mon").value == "day18"){
               document.getElementById("hi18").className = "active";
             }
 else if (document.getElementById("mon").value == "day19"){
-                    	document.getElementById("hi19").className = "active";
+                      document.getElementById("hi19").className = "active";
                     }
 else if (document.getElementById("mon").value == "day20"){
                     document.getElementById("hi20").className = "active";
@@ -349,7 +404,7 @@ else if (document.getElementById("mon").value == "day22"){
                     document.getElementById("hi22").className = "active";
                   }
 else if (document.getElementById("mon").value == "day23"){
-                          	document.getElementById("hi23").className = "active";
+                            document.getElementById("hi23").className = "active";
                           }
 else if (document.getElementById("mon").value == "day24"){
                           document.getElementById("hi24").className = "active";
@@ -379,8 +434,8 @@ else if (document.getElementById("mon").value == "day31"){
 
 function deacti(){
 if (document.getElementById("mon").value == "day1"){
-	document.getElementById("hi").className = "nactive";
-	}
+  document.getElementById("hi").className = "nactive";
+  }
 
 else if (document.getElementById("mon").value == "day2"){
   document.getElementById("hi2").className = "nactive";
@@ -417,7 +472,7 @@ else if (document.getElementById("mon").value == "day10"){
         document.getElementById("hi10").className = "nactive";
         }
 else if (document.getElementById("mon").value == "day11"){
-        	document.getElementById("hi11").className = "nactive";
+          document.getElementById("hi11").className = "nactive";
         }
 else if (document.getElementById("mon").value == "day12"){
         document.getElementById("hi12").className = "nactive";
@@ -429,7 +484,7 @@ else if (document.getElementById("mon").value == "day14"){
         document.getElementById("hi14").className = "nactive";
       }
 else if (document.getElementById("mon").value == "day15"){
-              	document.getElementById("hi15").className = "nactive";
+                document.getElementById("hi15").className = "nactive";
               }
 else if (document.getElementById("mon").value == "day16"){
               document.getElementById("hi16").className = "nactive";
@@ -441,7 +496,7 @@ else if (document.getElementById("mon").value == "day18"){
               document.getElementById("hi18").className = "nactive";
             }
 else if (document.getElementById("mon").value == "day19"){
-                    	document.getElementById("hi19").className = "nactive";
+                      document.getElementById("hi19").className = "nactive";
                     }
 else if (document.getElementById("mon").value == "day20"){
                     document.getElementById("hi20").className = "nactive";
@@ -453,7 +508,7 @@ else if (document.getElementById("mon").value == "day22"){
                     document.getElementById("hi22").className = "active";
                   }
 else if (document.getElementById("mon").value == "day23"){
-                          	document.getElementById("hi23").className = "nactive";
+                            document.getElementById("hi23").className = "nactive";
                           }
 else if (document.getElementById("mon").value == "day24"){
                           document.getElementById("hi24").className = "nactive";
@@ -481,6 +536,35 @@ else if (document.getElementById("mon").value == "day31"){
                                                                                                 }
 }
 
+//progress js
+
+var x = 50;
+var numPoints = 0;
+function button(){
+  alert("Congratulations! You just won 15 points!");
+  var c = document.getElementById("myPoints");
+  var ctx = c.getContext("2d");
+  ctx.fillStyle = "grey";
+  ctx.fillRect(0, 0, x, 100);
+  x += 50;
+  numPoints += 15;
+  document.getElementById("woo2").innerHTML = ( numPoints);
+
+  var stickers = ["CROWN", "DIAMOND", "THUMB", "STAR", "CASH", "KEY", "TROPHY", "SMILE", "CHECK", "CUPCAKE"];
+  y = 150;
+  for (i = 0; i < stickers.length; i++) {
+    if (numPoints == y) {
+      alert("You just won an achievement sticker!");
+      ctx.fillStyle = "#e3dede";
+      ctx.fillRect(0, 0, 500, 100);
+      x = 50;
+      document.getElementById(stickers[i]).style.display = 'inline-block';
+    }
+    y += 150;
+   }
+
+}
+
 
 //stay connected js
 //var modal = document.getElementById('myModal');
@@ -503,29 +587,5 @@ else if (document.getElementById("mon").value == "day31"){
   //  }
 //}
 
-function weekFunction() {
-    var day = prompt("Enter the day you would like to complete the task", "monday");
-    var time = prompt("Enter the time you would like to complete the task", "5:00");
-    var task = prompt("Enter the task you would like ot complete", "write essay");
-    if (day == ("monday")){
-      document.getElementById("monday").innerHTML = document.getElementById("monday").innerHTML + "<br>" + " " + day + " " + "at" + " " + time + " " + task;
-    }
-    if (day == ("tuesday") || ("Tuesday")){
-      document.getElementById("tuesday").innerHTML = document.getElementById("tuesday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
-    }
-    if (day == ("wednesday") || ("Wednesday")){
-      document.getElementById("wednesday").innerHTML = document.getElementById("wednesday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
-    }
-    if (day == ("thursday") || ("Thursday")){
-      document.getElementById("thursday").innerHTML = document.getElementById("thursday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
-    }
-    if (day == ("friday") || ("Friday")){
-      document.getElementById("friday").innerHTML = document.getElementById("friday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
-    }
-    if (day == ("saturday") || ("saturday")){
-      document.getElementById("saturday").innerHTML = document.getElementById("saturday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
-    }
-    if (day == ("sunday") || ("Sunday")){
-      document.getElementById("sunday").innerHTML = document.getElementById("sunday").innerHTML + "<br>" + "on" + " " + day + " " + "at" + " " + time + " " + task;
-    }
-}
+//for some reason tasks print in one paragraph
+
