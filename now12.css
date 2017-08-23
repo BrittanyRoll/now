@@ -1,3 +1,29 @@
+.hi{
+  color: black;
+  font-size: 400%;
+  font-family: 'Raleway', sans-serif;
+  text-align:center;
+}
+
+.h{
+  font-family: 'Raleway', sans-serif;
+  font-size: 170%;
+}
+
+.hello{
+  font-size: 200%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.b{
+  margin-bottom: 400px;
+}
+
+
+
+
+
+
 @media only screen and (min-width: 721px) and (max-width: 908px){
  .menu .links ul li a{
    float: left;
